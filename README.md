@@ -4,3 +4,5 @@ Projeto válido como finalização do bimestre. 2º Jogos. Integrantes: Gabriel 
 24/10/2022 - Começo do trabalho exportado para o github, primeira versão do jogo funcionando
 
 25/10/2022 - Planejamento do Jogo em Javascript, testagem do jogo em C#, finalização do diagrama de caso de uso e começo do diagrama de atividade
+
+31/10/2022 - Término dos diagramas e avanço em modelagem e programação do jogo em C#
