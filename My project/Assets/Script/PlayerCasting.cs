@@ -11,6 +11,8 @@ public class PlayerCasting : MonoBehaviour
     void Update()
     {
         RaycastHit Hit;
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 100, Color.green);
+
         if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), out Hit))
         {
             oTrajeto = Hit.distance;
