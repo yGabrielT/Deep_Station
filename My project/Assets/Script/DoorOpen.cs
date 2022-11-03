@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DoorOpen : MonoBehaviour
 {
-    public float aDistancia;
+    private float aDistancia;
     public GameObject AcTexto;
     public GameObject DescTexto;
     public GameObject aPorta;
     public GameObject Tranca;
     public AudioSource SomDaPorta;
+    public AudioSource SomTrancado;
     public float ChaveIsHere;
     public Camera cam;
 
@@ -25,9 +27,21 @@ public class DoorOpen : MonoBehaviour
             {
                 if (aDistancia <= 15 && ChaveIsHere == 0)
                 {
-                    Tranca.SetActive(true);
-                    AcTexto.SetActive(false);
-                    DescTexto.SetActive(false);
+                    AcTexto.SetActive(true);
+                    DescTexto.SetActive(true);
+
+                    if (Input.GetButtonDown("Action") && ChaveIsHere == 0)
+                    {
+                        if (aDistancia <= 15)
+                        {
+                            DescTexto.GetComponent<TextMeshProUGUI>().enabled = false;
+                            AcTexto.GetComponent<TextMeshProUGUI>().enabled = false;
+                            AcTexto.SetActive(false);
+                            DescTexto.SetActive(false);
+                            Tranca.SetActive(true);
+                            SomTrancado.Play();
+                        }
+                    }
                 }
                 else
                 {
@@ -39,6 +53,8 @@ public class DoorOpen : MonoBehaviour
                 {
                     AcTexto.SetActive(true);
                     DescTexto.SetActive(true);
+                    DescTexto.GetComponent<TextMeshProUGUI>().enabled = true;
+                    AcTexto.GetComponent<TextMeshProUGUI>().enabled = true;
 
                     if (Input.GetButtonDown("Action") && ChaveIsHere == 1)
                     {
@@ -47,7 +63,7 @@ public class DoorOpen : MonoBehaviour
                             this.GetComponent<BoxCollider>().enabled = false;
                             DescTexto.SetActive(false);
                             AcTexto.SetActive(false);
-                            aPorta.GetComponent<Animation>().Play("Door");
+                            aPorta.GetComponent<Animation>().Play("DoorNow");
                             SomDaPorta.Play();
                             ChaveIsHere = 0;
                         }
@@ -62,6 +78,7 @@ public class DoorOpen : MonoBehaviour
             AcTexto.SetActive(false);
             Tranca.SetActive(false);
         }
+
     }
     void Update()
     {

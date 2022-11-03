@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickKey : MonoBehaviour
+public class CartaAbrir : MonoBehaviour
 {
     private float Distance;
-    public GameObject ATexto;
-    public GameObject DTexto;
-    public static float ChaveOpen = 0;
+    public GameObject ACTexto;
+    public GameObject CTexto;
+    public GameObject Carta;
     public Camera cam;
 
     void GetMouseInfo()
@@ -21,13 +21,13 @@ public class PickKey : MonoBehaviour
             {
                 if (Distance <= 15)
                 {
-                    ATexto.SetActive(true);
-                    DTexto.SetActive(true);
+                    ACTexto.SetActive(true);
+                    CTexto.SetActive(true);
                 }
                 else
                 {
-                    DTexto.SetActive(false);
-                    ATexto.SetActive(false);
+                    CTexto.SetActive(false);
+                    ACTexto.SetActive(false);
                 }
                 if (Input.GetButtonDown("Action"))
                 {
@@ -35,9 +35,9 @@ public class PickKey : MonoBehaviour
                     {
                         this.GetComponent<BoxCollider>().enabled = false;
                         this.GetComponent<MeshRenderer>().enabled = false;
-                        ChaveOpen = 1;
-                        DTexto.SetActive(false);
-                        ATexto.SetActive(false);
+                        CTexto.SetActive(false);
+                        ACTexto.SetActive(false);
+                        Carta.SetActive(true);
                     }
                 }
             }
@@ -45,8 +45,8 @@ public class PickKey : MonoBehaviour
         }
         else
         {
-            DTexto.SetActive(false);
-            ATexto.SetActive(false);
+            CTexto.SetActive(false);
+            ACTexto.SetActive(false);
 
         }
 
@@ -56,4 +56,5 @@ public class PickKey : MonoBehaviour
         Distance = PlayerCasting.DistanciaDoTrajeto;
         GetMouseInfo();
     }
+
 }

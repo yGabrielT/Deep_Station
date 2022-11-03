@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DoorNoLock : MonoBehaviour
 {
-    public float aDistancia;
+    private float aDistancia;
     public GameObject AcTexto;
     public GameObject DescTexto;
     public GameObject aPorta;
