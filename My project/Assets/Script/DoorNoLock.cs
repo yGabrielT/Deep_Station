@@ -10,49 +10,35 @@ public class DoorNoLock : MonoBehaviour
     public GameObject DescTexto;
     public GameObject aPorta;
     public AudioSource SomDaPorta;
-    public Camera cam;
 
-    void GetMouseInfo()
+    void OnMouseOver()
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        if (aDistancia <= 15)
         {
-            if (hit.collider.transform.name == name)
+            AcTexto.SetActive(true);
+            DescTexto.SetActive(true);
+
+            if (Input.GetButtonDown("Action"))
             {
                 if (aDistancia <= 15)
                 {
-                    AcTexto.SetActive(true);
-                    DescTexto.SetActive(true);
-
-                    if (Input.GetButtonDown("Action"))
-                    {
-                        if (aDistancia <= 15)
-                        {
-                            this.GetComponent<BoxCollider>().enabled = false;
-                            DescTexto.SetActive(false);
-                            AcTexto.SetActive(false);
-                            aPorta.GetComponent<Animation>().Play("Door");
-                            SomDaPorta.Play();
-                        }
-                    }
+                    this.GetComponent<BoxCollider>().enabled = false;
+                    DescTexto.SetActive(false);
+                    AcTexto.SetActive(false);
+                    aPorta.GetComponent<Animation>().Play("Door");
+                    SomDaPorta.Play();
                 }
-
             }
-
         }
-        else
-        {
-            DescTexto.SetActive(false);
-            AcTexto.SetActive(false);
-        }
-
+    }
+    void OnMouseExit()
+    {
+        DescTexto.SetActive(false);
+        AcTexto.SetActive(false);
     }
     void Update()
     {
         aDistancia = PlayerCasting.DistanciaDoTrajeto;
-        GetMouseInfo();
     }
 }
 

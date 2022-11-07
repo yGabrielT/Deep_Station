@@ -8,53 +8,43 @@ public class CartaAbrir : MonoBehaviour
     public GameObject ACTexto;
     public GameObject CTexto;
     public GameObject Carta;
-    public Camera cam;
+    public GameObject Volte;
 
-    void GetMouseInfo()
+    void OnMouseOver()
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        if (Distance <= 15)
         {
-            if (hit.collider.transform.name == name)
+            ACTexto.SetActive(true);
+            CTexto.SetActive(true);
+        }
+        if (Input.GetButtonDown("Action"))
+        {
+            if (Distance <= 15)
             {
-                if (Distance <= 15)
-                {
-                    ACTexto.SetActive(true);
-                    CTexto.SetActive(true);
-                }
-                else
-                {
-                    CTexto.SetActive(false);
-                    ACTexto.SetActive(false);
-                }
-                if (Input.GetButtonDown("Action"))
-                {
-                    if (Distance <= 15)
-                    {
-                        this.GetComponent<BoxCollider>().enabled = false;
-                        this.GetComponent<MeshRenderer>().enabled = false;
-                        CTexto.SetActive(false);
-                        ACTexto.SetActive(false);
-                        Carta.SetActive(true);
-                    }
-                }
+                this.GetComponent<BoxCollider>().enabled = false;
+                this.GetComponent<MeshRenderer>().enabled = false;
+                CTexto.SetActive(false);
+                ACTexto.SetActive(false);
+                Carta.SetActive(true);
+                Volte.SetActive(true);
             }
-
         }
-        else
-        {
-            CTexto.SetActive(false);
-            ACTexto.SetActive(false);
-
-        }
-
+    }
+    public void OnMouseExit()
+    {
+        CTexto.SetActive(false);
+        ACTexto.SetActive(false);
     }
     void Update()
     {
         Distance = PlayerCasting.DistanciaDoTrajeto;
-        GetMouseInfo();
+        if (Input.GetButtonDown("Voltar") && Carta.activeSelf)
+        {
+            Carta.SetActive(false);
+            Volte.SetActive(false);
+            this.GetComponent<BoxCollider>().enabled = true;
+            this.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 
 }
