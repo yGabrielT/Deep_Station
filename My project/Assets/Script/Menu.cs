@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void BoataoSair()
+    public void BotaoSair()
     {
         Application.Quit();
     }
