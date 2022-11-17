@@ -25,7 +25,7 @@ public class DoorNoLock : MonoBehaviour
                     this.GetComponent<BoxCollider>().enabled = false;
                     DescTexto.SetActive(false);
                     AcTexto.SetActive(false);
-                    aPorta.GetComponent<Animation>().Play("Door");
+                    aPorta.GetComponent<Animation>().Play("DoorOpening");
                     SomDaPorta.Play();
                 }
             }

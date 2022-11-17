@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Metro.unity
     guid: 78bf2f2302ff46f49a410d52b5f1e0f5
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 9f4b6649239945f448db1fd57f5d613b
   m_configObjects: {}
