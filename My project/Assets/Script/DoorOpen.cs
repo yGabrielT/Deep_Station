@@ -51,7 +51,7 @@ public class DoorOpen : MonoBehaviour
                     this.GetComponent<BoxCollider>().enabled = false;
                     DescTexto.SetActive(false);
                     AcTexto.SetActive(false);
-                    aPorta.GetComponent<Animation>().Play("DoorNow");
+                    aPorta.GetComponent<Animation>().Play("DoorOpening");
                     SomDaPorta.Play();
                     ChaveIsHere = 0;
                 }
