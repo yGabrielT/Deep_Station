@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 9f4b6649239945f448db1fd57f5d613b
+  - enabled: 1
+    path: Assets/Scenes/MetroInterior.unity
+    guid: 344df4fc6eb522446ad9502a06fecb51
   m_configObjects: {}
