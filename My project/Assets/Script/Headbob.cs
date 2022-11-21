@@ -5,6 +5,7 @@ using UnityEngine;
 public class Headbob : MonoBehaviour
 {
     public Animator camAnin;
+    public Animator PersonagemAnin;
     public bool SprintToggle = false;
 
 
@@ -16,6 +17,11 @@ public class Headbob : MonoBehaviour
             camAnin.ResetTrigger("Idle");
             camAnin.ResetTrigger("Sprint");
             camAnin.SetTrigger("Walk");
+            PersonagemAnin.ResetTrigger("Crouch");
+            PersonagemAnin.ResetTrigger("Idle");
+            PersonagemAnin.ResetTrigger("Sprint");
+            PersonagemAnin.SetTrigger("Walk");
+            
             SprintToggle = false;
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -24,6 +30,10 @@ public class Headbob : MonoBehaviour
                 camAnin.ResetTrigger("Idle");
                 camAnin.ResetTrigger("Walk");
                 camAnin.SetTrigger("Sprint");
+                PersonagemAnin.ResetTrigger("Crouch");
+                PersonagemAnin.ResetTrigger("Idle");
+                PersonagemAnin.ResetTrigger("Walk");
+                PersonagemAnin.SetTrigger("Sprint");
                 SprintToggle = true;
             }
 
@@ -33,6 +43,10 @@ public class Headbob : MonoBehaviour
                 camAnin.ResetTrigger("Walk");
                 camAnin.ResetTrigger("Sprint");
                 camAnin.SetTrigger("Crouch");
+                PersonagemAnin.ResetTrigger("Sprint");
+                PersonagemAnin.ResetTrigger("Idle");
+                PersonagemAnin.ResetTrigger("Walk");
+                PersonagemAnin.SetTrigger("Crouch");
                 SprintToggle = false;
             }
         }
@@ -43,6 +57,10 @@ public class Headbob : MonoBehaviour
             camAnin.ResetTrigger("Walk");
             camAnin.ResetTrigger("Sprint");
             camAnin.SetTrigger("Idle");
+            PersonagemAnin.ResetTrigger("Sprint");
+            PersonagemAnin.ResetTrigger("Crouch");
+            PersonagemAnin.ResetTrigger("Walk");
+            PersonagemAnin.SetTrigger("Idle");
             SprintToggle = false;
         }
     }

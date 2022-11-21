@@ -9,6 +9,8 @@ public class CartaAbrir : MonoBehaviour
     public GameObject CTexto;
     public GameObject Carta;
     public GameObject Volte;
+    public GameObject obj;
+    private Color startcolor;
 
     void OnMouseOver()
     {
@@ -21,12 +23,13 @@ public class CartaAbrir : MonoBehaviour
         {
             if (Distance <= 15)
             {
-                this.GetComponent<BoxCollider>().enabled = false;
-                this.GetComponent<MeshRenderer>().enabled = false;
+                obj.GetComponent<BoxCollider>().enabled = false;
+                obj.GetComponent<MeshRenderer>().enabled = false;
                 CTexto.SetActive(false);
                 ACTexto.SetActive(false);
                 Carta.SetActive(true);
                 Volte.SetActive(true);
+                obj.GetComponent<Outline>().enabled = false;
             }
         }
     }
@@ -42,8 +45,8 @@ public class CartaAbrir : MonoBehaviour
         {
             Carta.SetActive(false);
             Volte.SetActive(false);
-            this.GetComponent<BoxCollider>().enabled = true;
-            this.GetComponent<MeshRenderer>().enabled = true;
+            obj.GetComponent<BoxCollider>().enabled = true;
+            obj.GetComponent<MeshRenderer>().enabled = true;
         }
     }
 
