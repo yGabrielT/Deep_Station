@@ -371,7 +371,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 04340b65742bd9d4aaed05a0e0c28b7d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7dbf48ed51912f489393c02ca27d92f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.151
   m_Pitch: 1
@@ -1048,7 +1048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932469443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 707.5974, y: 198.1382, z: 581.64}
+  m_LocalPosition: {x: 707.5974, y: 198.1382, z: 560.9}
   m_LocalScale: {x: 45.40445, y: 40.382416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3719,7 +3719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868141448149898825}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 705.83, y: 191.17, z: 622.15}
+  m_LocalPosition: {x: 705.83, y: 191.17, z: 641.17}
   m_LocalScale: {x: 12.818, y: 20.715328, z: 12.818}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3752,6 +3752,7 @@ GameObject:
   - component: {fileID: 8868141448149898818}
   - component: {fileID: 8868141448149898829}
   - component: {fileID: 8868141448149898828}
+  - component: {fileID: 8868141448149898832}
   - component: {fileID: 8868141448149898831}
   - component: {fileID: 8868141448149898830}
   - component: {fileID: 8868141448149898819}
@@ -3842,11 +3843,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868141448149898825}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.67, y: 1.07, z: 2.41}
+  m_Size: {x: 1, y: 1, z: 3.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8868141448149898832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868141448149898825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8be020dad71044b914c13d5d10ca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8892231835415922913
 Transform:
   m_ObjectHideFlags: 0

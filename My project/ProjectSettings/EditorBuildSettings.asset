@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutsceneMetro.unity
     guid: 4263bb9fdd72abb4fa89b8736aa82dd4
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3002900b76eb11c4faa8389d1754d00a
   m_configObjects: {}
