@@ -24,7 +24,7 @@ public class EntrarMetro : MonoBehaviour
 
                     DescTexto.SetActive(false);
                     AcTexto.SetActive(false);
-                    SceneManager.LoadScene(7);
+                    SceneManager.LoadScene(9);
                 }
             }
         }

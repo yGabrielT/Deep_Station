@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fim.unity
     guid: babd9e0f4333df042b56a5602aff2205
+  - enabled: 1
+    path: Assets/Scenes/Cuts_Metro_dentro.unity
+    guid: fdd112c710747d44c875fc50932a56f1
   m_configObjects: {}
