@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MudarCena : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void MudeCena()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(3);
     }
+    
 }

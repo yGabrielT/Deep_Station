@@ -64,7 +64,7 @@ public class Memoria : MonoBehaviour
             Bt3.SetActive(false);
             Bt4.SetActive(false);
             mp32.Play();
-            SceneManager.LoadScene(8);
+            ChageScene.troca = true;
         }
         else
         {

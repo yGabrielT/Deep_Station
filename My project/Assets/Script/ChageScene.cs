@@ -5,8 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class ChageScene : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    public int CarregarFase;
+    public Animator animador;
+    public int QualCena;
+    public static bool troca;
+
+    public void MudarParaNivel (int NivelIndex)
     {
-        SceneManager.LoadScene(1);
+        CarregarFase = NivelIndex;
+        animador.SetTrigger("EntrarCena");
     }
+
+    public void MudeCenaAnimador()
+    {
+        SceneManager.LoadScene(CarregarFase);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        MudarParaNivel(QualCena);
+    }
+
+    public void Update()
+    {
+        if (troca == true)
+        {
+            MudarParaNivel(QualCena);
+            troca = false;
+        }
+    }
+    
+  
 }

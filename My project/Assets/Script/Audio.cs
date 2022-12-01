@@ -20,6 +20,6 @@ public class Audio : MonoBehaviour
 
     public void TrocarCena()
     {
-        SceneManager.LoadScene(3);
+        ChageScene.troca = true;
     }
 }

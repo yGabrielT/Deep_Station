@@ -10,6 +10,7 @@ public class EntrarMetro : MonoBehaviour
     public GameObject DescTexto;
     public float collision;
 
+
     void OnMouseOver()
     {
         if (aDistancia <= 15)
@@ -24,7 +25,7 @@ public class EntrarMetro : MonoBehaviour
 
                     DescTexto.SetActive(false);
                     AcTexto.SetActive(false);
-                    SceneManager.LoadScene(9);
+                    ChageScene.troca = true;
                 }
             }
         }
@@ -48,4 +49,8 @@ public class EntrarMetro : MonoBehaviour
             this.GetComponent<BoxCollider>().enabled = true;
         }
     }
+
+
+
+
 }
