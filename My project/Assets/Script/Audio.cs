@@ -7,6 +7,8 @@ public class Audio : MonoBehaviour
 {
     public AudioSource um;
     public AudioSource dois;
+    public AudioSource tres;
+    public AudioSource quatro;
 
     public void Audio1()
     {
@@ -16,6 +18,21 @@ public class Audio : MonoBehaviour
     public void Audio2()
     {
         dois.Play();
+    }
+
+    public void Audio3()
+    {
+        tres.Play();
+    }
+
+    public void PareAudio3()
+    {
+        tres.Stop();
+    }
+    
+    public void Audio4()
+    {
+        quatro.Play();
     }
 
     public void TrocarCena()

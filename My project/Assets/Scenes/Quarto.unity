@@ -12525,7 +12525,7 @@ MonoBehaviour:
   _ReferenceHeight: 79
   _ContrastBoost: 0
   _BrightnessBoost: 0
-  _ColorDepth: 5
+  _ColorDepth: 6
   ColorPalette: {fileID: 11400000, guid: 10ac3f8b6f429ab4fb025a4d34661e8b, type: 2}
   EnableDithering: 1
   RGBDithering: 0
