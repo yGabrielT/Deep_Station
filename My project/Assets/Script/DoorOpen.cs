@@ -11,6 +11,7 @@ public class DoorOpen : MonoBehaviour
     public GameObject DescTexto;
     public GameObject aPorta;
     public GameObject Tranca;
+    public GameObject Legenda;
     public AudioSource SomDaPorta;
     public AudioSource SomTrancado;
     public float ChaveIsHere;
@@ -53,6 +54,7 @@ public class DoorOpen : MonoBehaviour
                     AcTexto.SetActive(false);
                     aPorta.GetComponent<Animation>().Play("DoorOpening");
                     SomDaPorta.Play();
+                    Legenda.GetComponent<Animation>().Play("TentarAbrir");
                     ChaveIsHere = 0;
                 }
             }

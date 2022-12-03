@@ -8,20 +8,21 @@ public class CartaAbrir : MonoBehaviour
     public GameObject ACTexto;
     public GameObject CTexto;
     public GameObject Carta;
+    public GameObject Legend;
     public GameObject Volte;
     public GameObject obj;
     private Color startcolor;
 
     void OnMouseOver()
     {
-        if (Distance <= 15)
+        if (Distance <= 40)
         {
             ACTexto.SetActive(true);
             CTexto.SetActive(true);
         }
         if (Input.GetButtonDown("Action"))
         {
-            if (Distance <= 15)
+            if (Distance <= 40)
             {
                 obj.GetComponent<BoxCollider>().enabled = false;
                 obj.GetComponent<MeshRenderer>().enabled = false;
@@ -47,6 +48,7 @@ public class CartaAbrir : MonoBehaviour
             Volte.SetActive(false);
             obj.GetComponent<BoxCollider>().enabled = true;
             obj.GetComponent<MeshRenderer>().enabled = true;
+            Legend.GetComponent<Animation>().Play("Legend");
         }
     }
 

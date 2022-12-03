@@ -7,6 +7,6 @@ public class EliminarPlayer : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(9);
     }
 }

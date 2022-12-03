@@ -2682,7 +2682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000420022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 706.7514, y: 194.4471, z: 511.4}
+  m_LocalPosition: {x: 706.7514, y: 194.4471, z: 499.9}
   m_LocalScale: {x: 46.66601, y: 37.850994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3629,7 +3629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900550711361145125}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c456617db00bd4babb6fb5d4ad5f0a78, type: 3}
   m_Name: 
@@ -4043,7 +4043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900550711608587337}
   m_LocalRotation: {x: -0, y: -0.9982605, z: -0, w: 0.058958463}
-  m_LocalPosition: {x: 704.17, y: 197.15, z: 699.18}
+  m_LocalPosition: {x: 711.63, y: 197.15, z: 694.91}
   m_LocalScale: {x: 3.399006, y: 6.0289793, z: 3.399006}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4103,10 +4103,6 @@ MonoBehaviour:
     m_Bits: 8
   isSprinting: 0
   sprintingMultiplier: 3
-  isCrouching: 0
-  crouchingMultiplier: 2.75
-  standingHeight: 3
-  crouchingHeight: 1.5
 --- !u!1 &910295348846556851
 GameObject:
   m_ObjectHideFlags: 0

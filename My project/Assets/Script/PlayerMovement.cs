@@ -16,19 +16,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isSprinting = false;
     public float sprintingMultiplier;
 
-    public bool isCrouching = false;
-    public float crouchingMultiplier;
-
-    public float standingHeight;
-    public float crouchingHeight;
-
     Vector3 velocity;
     bool isGrounded;
     
     // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
     }
 
     // Update is called once per frame
@@ -46,16 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            isCrouching = true;
-        }
-        else
-        {
-            isCrouching = false;
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift) && isCrouching == false)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             isSprinting = true;
         }
@@ -67,16 +51,6 @@ public class PlayerMovement : MonoBehaviour
         if (isSprinting == true)
         {
             move *= sprintingMultiplier;
-        }
-
-        if (isCrouching == true)
-        {
-            controller.height = crouchingHeight;
-            move *= crouchingMultiplier;
-        }
-        else
-        {
-            controller.height = standingHeight;
         }
 
         controller.Move(move * speed * Time.deltaTime);

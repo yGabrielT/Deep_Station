@@ -6687,13 +6687,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 5.21
-  m_Radius: 1.63
+  m_Height: 3.5
+  m_Radius: 0.94
   m_SlopeLimit: 45
   m_StepOffset: 0.7
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.66, z: 0}
+  m_Center: {x: 0, y: -0.6, z: 0}
 --- !u!4 &900550711608587339
 Transform:
   m_ObjectHideFlags: 0
@@ -16747,7 +16747,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.92
-  m_Speed: 500
+  m_Speed: 450
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 200
