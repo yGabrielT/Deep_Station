@@ -35,6 +35,7 @@ public class DoorOpen : MonoBehaviour
                     DescTexto.SetActive(false);
                     Tranca.SetActive(true);
                     SomTrancado.Play();
+                    Legenda.GetComponent<Animation>().Play("TentarAbrir");
                 }
             }
         }
@@ -54,7 +55,6 @@ public class DoorOpen : MonoBehaviour
                     AcTexto.SetActive(false);
                     aPorta.GetComponent<Animation>().Play("DoorOpening");
                     SomDaPorta.Play();
-                    Legenda.GetComponent<Animation>().Play("TentarAbrir");
                     ChaveIsHere = 0;
                 }
             }

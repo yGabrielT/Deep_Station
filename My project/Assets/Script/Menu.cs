@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
 
     public void BotaoIniciar()
     {
-        SceneManager.LoadScene(0);
+        ChageScene.troca = true;
     }
 
     public void BotaoSair()

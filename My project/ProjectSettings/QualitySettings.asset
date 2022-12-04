@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 6
+  m_CurrentQuality: 3
   m_QualitySettings:
   - serializedVersion: 2
     name: Very Low
@@ -120,7 +120,7 @@ QualitySettings:
     shadows: 1
     shadowResolution: 1
     shadowProjection: 1
-    shadowCascades: 1
+    shadowCascades: 4
     shadowDistance: 150
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334

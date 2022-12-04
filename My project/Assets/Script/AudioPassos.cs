@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPassos : MonoBehaviour
 {
-    public AudioSource footsteps, sprintsteps, crouchsteps;
+    public AudioSource footsteps, sprintsteps;
 
     void Update()
     {
@@ -12,7 +12,6 @@ public class AudioPassos : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftControl))
             {
-                crouchsteps.enabled = true;
                 sprintsteps.enabled = false;
                 footsteps.enabled = false;
             }
@@ -22,13 +21,11 @@ public class AudioPassos : MonoBehaviour
                 {
                     sprintsteps.enabled = true;
                     footsteps.enabled = false;
-                    crouchsteps.enabled = false;
                 }
                 else
                 {
                     footsteps.enabled = true;
                     sprintsteps.enabled = false;
-                    crouchsteps.enabled = false;
                 }
             }
         }
@@ -36,7 +33,6 @@ public class AudioPassos : MonoBehaviour
         {
             footsteps.enabled = false;
             sprintsteps.enabled = false;
-            crouchsteps.enabled = false;
         }
     }
 }
