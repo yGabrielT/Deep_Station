@@ -9,4 +9,6 @@ Projeto válido como finalização do bimestre. 2º Jogos. Integrantes: Gabriel 
 
 01/11/2022 - Finalização do roteiro e encaminhação do resto do trabalho para o dia 03
 
+05/12/2022 - Acabamo tudo
+
 Download do jogo: https://www.mediafire.com/file/dy2vtxqmend36w4/Deep_Station.rar/file
